@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#DFF8F5"
+    style="@style/UtilityMeters.MenuItem">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="СЧЁТЧИКИ"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        style="@style/UtilityMeters.MenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/gas"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Газ"
+            android:textSize="20dp"
+            app:cornerRadius="?android:attr/windowTitleSize" />
+
+        <Button
+            android:id="@+id/enregy"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Электричество"
+            android:textSize="20dp"
+            app:cornerRadius="?android:attr/windowTitleSize" />
+
+        <Button
+            android:id="@+id/cold_water"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Холодная вода"
+            android:textSize="20dp"
+            app:cornerRadius="?android:attr/windowTitleSize" />
+
+        <Button
+            android:id="@+id/hot_water_button"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Горячая вода"
+            android:textSize="20dp"
+            app:cornerRadius="?android:attr/windowTitleSize" />
+        />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
