@@ -26,7 +26,7 @@
     <LinearLayout
         style="@style/UtilityMeters.MenuItem"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="0dp"
         android:orientation="vertical">
 
@@ -61,9 +61,30 @@
             android:layout_height="80dp"
             android:text="Горячая вода"
             android:textSize="20dp"
-            app:cornerRadius="?android:attr/windowTitleSize" />
+            app:cornerRadius="?android:attr/windowTitleSize" /><![CDATA[
+
         />
+    ]]>
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/meter_list_text_view3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Посмотреть все показания"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

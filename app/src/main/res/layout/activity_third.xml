@@ -11,16 +11,130 @@
         android:id="@+id/pictureThirdActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-186dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/thanks_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Спасибо, Ваши показания переданы"
+        android:layout_marginTop="50dp"
+        android:text="Спасибо, что пользуетесь нашим приложением!"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pictureThirdActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/pictureThirdActivity" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thanks_text_view">
+
+        <TextView
+            android:id="@+id/gas_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Газ"
+            android:textAlignment="viewStart"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/energy_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Электричество"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/cold_water_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Холодная вода"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/hot_water_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Горячая вода"
+            android:textSize="27sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/to_first_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="90dp"
+        android:text="в начало"
+        app:cornerRadius="?android:attr/windowTitleSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/to_second_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="90dp"
+        android:text="  назад "
+        app:cornerRadius="?android:attr/windowTitleSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thanks_text_view">
+
+        <TextView
+            android:id="@+id/gas_value_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="85"
+            android:textAlignment="viewStart"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/energy_value_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="8430"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/cold_water_value_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="265"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/hot_water_value_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="241"
+            android:textSize="27sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

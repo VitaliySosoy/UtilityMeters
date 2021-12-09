@@ -31,22 +31,29 @@ class ChangedMeter() : AppCompatActivity() {
         resoursePictureImageView = findViewById(R.id.resoursePictureImageView)
         sendValueButton = findViewById(R.id.send_value_button)
         inputCurrent = findViewById(R.id.textInputEditText)
+        val backButton : Button = findViewById(R.id.back_button)
 
 
-        var currentValue: String
+//        var currentValue: String
 
-        resourseNameTextView.text = intent.extras?.getString(RES_NAME, "Nothing")
+        resourseNameTextView.text = intent.extras?.getString(RES_NAME, "Газ")
         lastValueTextView.text = intent.extras?.getString(LAST_VALUE, "Nothing")
 
         when (resourseNameTextView.text) {
             "Газ"->
-                resoursePictureImageView.setImageResource(R.drawable._meter0)
+                resoursePictureImageView.setImageResource(R.drawable.gas_1)
             "Электричество" ->
-                resoursePictureImageView.setImageResource(R.drawable.ic_launcher_foreground)
+                resoursePictureImageView.setImageResource(R.drawable.electro)
             "Холодная вода" ->
-                resoursePictureImageView.setImageResource(R.drawable._meter0)
+                resoursePictureImageView.setImageResource(R.drawable.__1cold_water)
             "Горячая вода" ->
-                resoursePictureImageView.setImageResource(R.drawable.ic_launcher_background)
+                resoursePictureImageView.setImageResource(R.drawable.resource__hot_water)
+            else -> {
+                resoursePictureImageView.setImageResource(R.drawable.gas_1)
+                resourseNameTextView.text = "Газ"
+                lastValueTextView.text = "85"
+
+            }
         }
 
 //        currentValue = inputCurrent.getText().toString()
@@ -66,7 +73,10 @@ class ChangedMeter() : AppCompatActivity() {
             startActivity(toThiredActivityIntent)
         }
 
-
+        backButton.setOnClickListener {
+            val toThiredActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(toThiredActivityIntent)
+        }
 
 
 

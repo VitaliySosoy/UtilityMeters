@@ -11,82 +11,88 @@
         android:id="@+id/lastValueText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#F71A17AE"
-        android:textSize="34sp"
+        android:layout_marginTop="10dp"
         android:text="прошлые показания"
-        app:layout_constraintBottom_toTopOf="@+id/lastValueTextView"
+        android:textAlignment="center"
+        android:textColor="#9E1B4AC3"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.322"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resoursePictureImageView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="текущие показния"
-        android:textColor="#9E1B4AC3"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/send_value_button"
+        android:textColor="#F71A17AE"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#2CC81F"
+        android:text="в начало"
+        android:textColor="#455A64"
+        app:cornerRadius="?android:attr/windowTitleSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/send_value_button"
-        android:layout_width="203dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#2CC81F"
         android:text="передать"
         android:textColor="#455A64"
-        android:textSize="24sp"
+        app:cornerRadius="?android:attr/windowTitleSize"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <TextView
         android:id="@+id/lastValueTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastValueText"
+        tools:text="81" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/lastValueTextView"
+    <TextView
+        android:id="@+id/resourse_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0"
+        android:text="Газ"
+        android:textAlignment="center"
+        android:textSize="38sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/resoursePictureImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="250"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/resourse_name_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="60"
-            android:textAlignment="center"
-            android:textSize="30dp"
-            tools:text="resourse name" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginBottom="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
@@ -95,10 +101,22 @@
             android:id="@+id/textInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="введите сюда"
+            android:backgroundTint="#5884854B"
+            android:hint="                    введите сюда"
             android:textAlignment="center"
-            android:textSize="24dp" />
+            android:textSize="20sp"
+            android:textStyle="italic" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/resoursePictureImageView"
+        android:layout_width="270dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resourse_name_text_view"
+        app:srcCompat="@drawable/electro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
